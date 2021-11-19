@@ -28,4 +28,22 @@ public class Solution1109 {
         return ans;
 
     }
+
+    public int[] corpFlightBookings2(int[][] bookings, int n) {
+
+        int[] ans = new int[n];
+        int[] diff = new int[n];
+        for (int[] booking : bookings) {
+            int i = booking[0], j = booking[1], c = booking[2];
+            diff[i - 1] += c;
+            if (j < n) {
+                diff[j] -= c;
+            }
+        }
+        ans[0] = diff[0];
+        for (int i = 1; i < n; i++) {
+            ans[i] = ans[i - 1] + diff[i];
+        }
+        return ans;
+    }
 }

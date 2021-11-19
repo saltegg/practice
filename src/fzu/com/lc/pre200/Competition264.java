@@ -116,8 +116,4 @@ public class Competition264 {
     }
 
 
-
-    public static void main(String[] args) {
-
-    }
 }
