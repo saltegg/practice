@@ -75,7 +75,7 @@ public class Competition267 {
     public String decodeCiphertext(String encodedText, int rows) {
 
 
-
+        int aaa;
         return null;
     }
 }
